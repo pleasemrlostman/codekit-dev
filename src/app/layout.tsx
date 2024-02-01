@@ -4,6 +4,7 @@ import "@/app/globals.css";
 import Header from "@/app/_component/common/header";
 import MainContextComponent from "@/app/_component/common/main-contextApi";
 import { cn } from "./_lib";
+import Footer from "@/app/_component//common/footer";
 
 const inter = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ export default function RootLayout({
       <body className={cn("overflow-x-hidden bg-slate-100", inter.className)}>
         <MainContextComponent>
           <Header />
-          <div>{children}</div>
+          {children}
+          <Footer />
         </MainContextComponent>
       </body>
     </html>

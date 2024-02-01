@@ -3,7 +3,7 @@ import Image from "next/image";
 import LogoImage from "/logo.png";
 import { Dispatch, SetStateAction, useContext } from "react";
 import { MainContext } from "./main-contextApi";
-import { motion, useAnimation, useWillChange } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 
 const Header = () => {
@@ -11,8 +11,6 @@ const Header = () => {
     pageScrollY: number;
     setPageScrollY: Dispatch<SetStateAction<number>>;
   };
-
-  console.log(pageScrollY);
 
   const controls = useAnimation();
 
@@ -31,10 +29,10 @@ const Header = () => {
         paddingRight: "100px",
       }}
       animate={{
-        opacity: pageScrollY > 50 ? 0 : 1,
-        y: pageScrollY > 50 ? -100 : 0,
-        paddingLeft: pageScrollY > 50 ? "100px" : "0px",
-        paddingRight: pageScrollY > 50 ? "100px" : "0px",
+        opacity: pageScrollY > 3 ? 0 : 1,
+        y: pageScrollY > 3 ? -100 : 0,
+        paddingLeft: pageScrollY > 3 ? "100px" : "0px",
+        paddingRight: pageScrollY > 3 ? "100px" : "0px",
       }}
       transition={{ ease: [0.17, 0.67, 0.83, 0.67], duration: 0.4 }}
       className="w-full border-b h-24 fixed top-0"
