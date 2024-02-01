@@ -12,8 +12,6 @@ const Footer = () => {
     setPageScrollY: Dispatch<SetStateAction<number>>;
   };
 
-  console.log("pageScrollY", pageScrollY);
-
   return (
     <footer className="bg-slate-200 w-full">
       <div className="flex items-center h-14 gap-4 justify-center">
@@ -25,6 +23,9 @@ const Footer = () => {
           animate={{
             x: pageScrollY > 98 ? 0 : -100,
             opacity: pageScrollY > 98 ? 1 : 0,
+          }}
+          transition={{
+            duration: 0.5,
           }}
           className="cursor-pointer h-6 flex items-center justify-center"
         >
@@ -40,6 +41,9 @@ const Footer = () => {
           animate={{
             x: pageScrollY > 98 ? 0 : 100,
             opacity: pageScrollY > 98 ? 1 : 0,
+          }}
+          transition={{
+            duration: 0.5,
           }}
         >
           © All rights reserved.
