@@ -5,8 +5,8 @@ const rotateArray = [0, 3, -3, 1, -1, 0];
 
 const Section2 = () => {
   return (
-    <div className="flex  justify-between pt-48 pb-48">
-      <h4 className="flex flex-col text-[5rem] font-[900] self-center">
+    <div className="flex justify-between pt-48 pb-48">
+      <h4 className="flex w-3/5 flex-col text-[5rem] font-[900] self-center">
         <motion.p
           initial={{ opacity: 0, translateX: -100 }}
           whileInView={{ opacity: 1, translateX: 0 }}
@@ -53,9 +53,9 @@ const Section2 = () => {
       <motion.ul
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-4 gap-4 w-1/2 self-end"
+        className="w-2/5 grid grid-cols-4 gap-4 w-1/2 self-end"
       >
-        {Array.from({ length: 20 }).map((_, index) => {
+        {Array.from({ length: 24 }).map((_, index) => {
           const modifiedArray = rotateArray.map((value) => {
             if (value !== 0) {
               const randomValue = Math.floor(Math.random() * 10) - 2;
